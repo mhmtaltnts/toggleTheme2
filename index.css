@@ -19,41 +19,10 @@ html, body{
     padding:0;
 }
 
-.container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+
 body{
     background-color: var(--light-green);
     height:100vh;
-}
-.container{
-    /*margin-top: 20px;*/
-    background-color: var(--snow);
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 1em;
-    min-width: 550px;
-    box-shadow: rgba(0,0,0,0.1) 0px 4px 6px -1px, rgba(0,0,0,0.6) 0px 2px 4px -1px;
-    font-family: "Rubik Beastly", cursive;
-    color: var(--bright-red)
-
-}
-
-button{
-    padding: 1em 2em;
-    border:none;
-    font-size: 20px;
-    background-color: var(--bright-red);
-    color: var(--snow);
-    border-radius: 999px;
-    box-shadow: rgba(0,0,0,0.1) 0px 4px 6px -1px, rgba(0,0,0,0.6) 0px 2px 4px -1px;
-}
-button:hover{
-    cursor:pointer;
-    background-color: var(--wine-red);
-
 }
 
 
@@ -135,6 +104,12 @@ nav.dark .toggler-slider{
 
 /*MAIN STYLES*/
 
+.main, .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main{
     padding: 57px 27px;
     flex: 1 1 auto;
@@ -143,4 +118,61 @@ main{
 main.dark{
     background-color: #282D35;
     color:white;
+}
+
+.container{
+    background-color: var(--snow);
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 35px;
+    min-width: 600px;
+    min-height: 450px;
+    max-width: 900px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 6px -1px, rgba(0,0,0,0.6) 0px 2px 4px -1px;
+    font-size: 35px;
+    color: var(--wine-red)
+
+}
+
+button{
+    padding: 0.25em 0.5em;
+    border:none;
+    font-size: 1.2rem;
+    background-color: var(--dark-green);
+    color: var(--snow);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.pause-btn{
+    background-color: var(--gold);
+    color: var(--wine-red)
+}
+.stop-btn{
+    background-color: var(--wine-red);
+}
+.material-icon-outlined{
+    padding-top: 5px;
+    margin:0;
+    font-size: 30px;
+}
+
+.animate{
+    display:inline-block;
+    animation-name: ring;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ring{
+    0%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
 }
